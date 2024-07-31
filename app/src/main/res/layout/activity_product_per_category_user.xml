@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.act_Product_per_Category_User">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ppcu_Search_Bar_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp">
+
+        <EditText
+            android:id="@+id/ppcu_txtin_Search_Term"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:ems="10"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ppcu_Search_Bar_Container"
+            app:layout_constraintEnd_toStartOf="@+id/ppcu_img_Search"
+            app:layout_constraintStart_toStartOf="@+id/ppcu_Search_Bar_Container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ppcu_img_Cart"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ppcu_Search_Bar_Container"
+            app:layout_constraintEnd_toEndOf="@+id/ppcu_Search_Bar_Container"
+            app:layout_constraintTop_toTopOf="@+id/ppcu_Search_Bar_Container"
+            app:tint="?attr/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/ppcu_img_Search"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ppcu_Search_Bar_Container"
+            app:layout_constraintEnd_toStartOf="@+id/ppcu_img_Cart"
+            app:layout_constraintTop_toTopOf="@+id/ppcu_Search_Bar_Container"
+            app:tint="?attr/colorPrimary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ppcu_txt_Show_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppcu_Search_Bar_Container"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="Showing Products of ----"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/ppcu_Swiper_Layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ppcu_txt_Show_Title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ppcu_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1021110781623",
+    "project_id": "bilicacies",
+    "storage_bucket": "bilicacies.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021110781623:android:8133f022fa0ae5f1cf6f32",
+        "android_client_info": {
+          "package_name": "com.holanda.bilicacies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021110781623-uble7eed4l5g1n72fpiluqgej40bmvp4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.holanda.bilicacies",
+            "certificate_hash": "3048ce996b6d6f4ae7180c8078e3968b7046f8e9"
+          }
+        },
+        {
+          "client_id": "1021110781623-gnl6se76putma5s09dcva1tiijvh6uvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR5Ar_J66Lir-Xn_ctJ-0shBYte6qlqtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021110781623-gnl6se76putma5s09dcva1tiijvh6uvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

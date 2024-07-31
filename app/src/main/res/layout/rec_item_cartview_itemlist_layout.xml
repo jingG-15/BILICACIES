@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartview_itemlist_const_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/img_numbering_border">
+
+        <CheckBox
+            android:id="@+id/cartview_itemlist_chkbx_Supplier_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="?attr/colorPrimaryVariant"
+            android:text="Supplier Name Here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cartview_itemlist_img_View_Store"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_chkbx_Supplier_Name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorPrimary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartview_itemlist_const_product_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartview_itemlist_const_header_container"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/img_numbering_border">
+
+        <ImageView
+            android:id="@+id/cartview_itemlist_img_Quantity_Add"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:layout_constraintTop_toTopOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+
+        <EditText
+            android:id="@+id/cartview_itemlist_txtin_Quantity"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_img_Quantity_Minus"
+            app:layout_constraintTop_toBottomOf="@+id/cartview_itemlist_txt_Price"
+            app:layout_constraintVertical_bias="0.357"
+            tools:text="1000" />
+
+        <ImageView
+            android:id="@+id/cartview_itemlist_img_Quantity_Minus"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:layout_constraintEnd_toStartOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_img_Product_Thumbnail"
+            app:layout_constraintTop_toTopOf="@+id/cartview_itemlist_txtin_Quantity"
+            app:srcCompat="@drawable/ic_baseline_remove_24" />
+
+        <TextView
+            android:id="@+id/cartview_txt_Peso_Sign2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="₱"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cartview_itemlist_txt_Price"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_img_Product_Thumbnail"
+            app:layout_constraintTop_toTopOf="@+id/cartview_itemlist_txt_Price" />
+
+        <TextView
+            android:id="@+id/cartview_itemlist_txt_Price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="Price Here"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartview_txt_Peso_Sign2"
+            app:layout_constraintTop_toBottomOf="@+id/cartview_itemlist_txt_Product_Name" />
+
+        <CheckBox
+            android:id="@+id/cartview_itemlist_chkbx_item_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:buttonTint="?attr/colorPrimaryVariant"
+            android:textSize="0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cartview_itemlist_img_Product_Thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_chkbx_item_mark"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/cartview_itemlist_txt_Product_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="Product Name Here"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartview_itemlist_img_Product_Thumbnail"
+            app:layout_constraintTop_toTopOf="@+id/cartview_itemlist_img_Product_Thumbnail" />
+
+        <ImageView
+            android:id="@+id/cartview_itemlist_img_Delete_from_Cart"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartview_itemlist_img_Quantity_Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cartview_itemlist_img_Quantity_Add"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+            app:tint="?attr/colorPrimaryVariant" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/cartview_itemlist_btn_Apply_Qty_Changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartview_itemlist_const_product_container"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/reg_btn_style"
+        android:text="Apply Qty Changes"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

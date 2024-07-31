@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profv_Swipe_Refresher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.act_Profile_Preview">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profv_cons_Layout_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="56dp"
+                    app:layout_constraintBottom_toTopOf="@+id/profv_txt_Total_Transactions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Full_Name"
+                    app:srcCompat="@drawable/img_numbering_border" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="56dp"
+                    app:layout_constraintBottom_toTopOf="@+id/profv_txt_Trans_Success"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                    app:srcCompat="@drawable/img_numbering_border" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                    app:srcCompat="@drawable/img_numbering_border" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Cover_Photo"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:foreground="@drawable/background_spinner"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_baseline_photo_size_select_actual_24" />
+
+                <ImageView
+                    android:id="@+id/profv_img_profile_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+
+                    android:layout_marginStart="16dp"
+
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/temp_logo"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_img_Cover_Photo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_img_Cover_Photo"
+                    tools:srcCompat="@drawable/temp_logo" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Full_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Sample Name Here"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_img_profile_photo"
+                    app:layout_constraintEnd_toStartOf="@+id/profv_img_Gender_Indicator"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_img_Cover_Photo" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Address_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_home_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Address"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Address Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Full_Name" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Date_of_registration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Date of Registration"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView25"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Address" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Contact_Number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Mobile Number Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Date_of_registration" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Age Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Contact_Number" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Total_Transactions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Transaction Count Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView33"
+                    app:layout_constraintTop_toBottomOf="@+id/cust_view_Seller_Summary4" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Trans_Success"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Successful Transaction Count Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView37"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_View_Products" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Trans_Unsuccess"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Unsuccessful Transaction Count Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Trans_Success" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Trans_Denied"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="116dp"
+                    android:text="Denied Buys Count Here"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView39"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Trans_Unsuccess" />
+
+                <TextView
+                    android:id="@+id/profv_txt_Product_Count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Product Count Here"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView35"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Total_Transactions" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Date_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_calendar_today_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Date_of_registration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Date_of_registration"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/cust_view_Seller_Summary2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Profile Details"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView9"
+                    app:layout_constraintStart_toStartOf="@+id/imageView9" />
+
+                <TextView
+                    android:id="@+id/cust_view_Seller_Summary4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Tap for Fullscreen View"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/profv_img_Valid_ID"
+                    app:layout_constraintStart_toStartOf="@+id/profv_img_Valid_ID"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_img_Valid_ID" />
+
+                <TextView
+                    android:id="@+id/cust_view_Seller_Summary3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Seller's Details"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView11"
+                    app:layout_constraintStart_toStartOf="@+id/imageView11" />
+
+                <TextView
+                    android:id="@+id/cust_view_Seller_Summary5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Transaction History as Buyer:"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView20"
+                    app:layout_constraintStart_toStartOf="@+id/imageView20" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Phone_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_phone_android_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Contact_Number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Contact_Number"
+                    app:tint="?attr/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Age_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_perm_contact_calendar_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Age"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Age"
+                    app:tint="?attr/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/profv_img_ID_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView36"
+                    app:tint="?attr/colorPrimary"
+                   />
+
+                <ImageView
+                    android:id="@+id/profv_img_Trans1_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_connect_without_contact_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Total_Transactions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Total_Transactions"
+                    app:tint="?attr/colorPrimary"
+                     />
+
+                <ImageView
+                    android:id="@+id/profv_img_Trans_Success_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_check_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Success"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Success"
+                    app:tint="@color/trans_success"
+                     />
+
+                <ImageView
+                    android:id="@+id/profv_img_Trans_Failed_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_cancel_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Unsuccess"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Unsuccess"
+                    app:tint="@color/trans_unsuccess"
+                     />
+
+                <ImageView
+                    android:id="@+id/profv_img_Trans_Denied_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_back_hand_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Denied"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Denied"
+                    app:tint="@color/trans_denied"
+                     />
+
+                <ImageView
+                    android:id="@+id/profv_img_Product_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_shopping_basket_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Product_Count"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Product_Count"
+                    app:tint="?attr/colorPrimary"
+                     />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Lives in"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Address"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Address_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Address" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Member since"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Date_of_registration"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Date_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Date_of_registration" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Contact Number:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Contact_Number"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Phone_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Contact_Number" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Age:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Age"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Age_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Age" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Valid ID Provided:"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_ID_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_img_Valid_ID" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Total Transactions:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Total_Transactions"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Trans1_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Total_Transactions" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Successful Transactions:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Success"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Trans_Success_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Success" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Failed Transactions:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Unsuccess"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Trans_Failed_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Unsuccess" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Denials by Seller:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Trans_Denied"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Trans_Denied_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Trans_Denied" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Total Products:"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Product_Count"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_Product_Icon"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Product_Count" />
+
+                <TextView
+                    android:id="@+id/profv_txt_View_Products"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="View All Products"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profv_img_View_Prod_Icon"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Product_Count" />
+
+                <ImageView
+                    android:id="@+id/profv_img_View_Prod_Icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_store_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_View_Products"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_View_Products"
+                    app:tint="?attr/colorPrimary"
+                     />
+
+                <ImageView
+                    android:id="@+id/profv_img_View_Products_Arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_View_Products"
+                    app:layout_constraintEnd_toEndOf="@+id/profv_txt_View_Products"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_View_Products"
+                    app:tint="?attr/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Valid_ID"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/backgrund_img_border"
+                    android:padding="2dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                    app:layout_constraintStart_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/profv_txt_Age"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/profv_img_Gender_Indicator"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_male"
+                    app:layout_constraintBottom_toBottomOf="@+id/profv_txt_Full_Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profv_txt_Full_Name"
+                    app:layout_constraintTop_toTopOf="@+id/profv_txt_Full_Name"
+                    app:tint="@color/trans_unsuccess"
+                    tools:srcCompat="@drawable/ic_female" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

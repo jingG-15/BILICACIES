@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BILICACY</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Messages</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile_title">Profile</string>
+
+    <string name="login_label">Login</string>
+    <string name="timer_label">Resend OTP code in </string>
+
+<!--    <string name="Server_Web_Host_IP">222.127.226.225</string>-->
+<!--    <string name="Server_Web_Host_IP">192.168.1.240</string>-->
+<!--        <string name="Server_Web_Host_IP">222.127.63.120</string>-->
+
+    <string name="Server_Web_Host_IP">bileco34thagma.ddns.net/</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="internal_storage">Internal storage</string>
+
+    <string name="default_notification_channel_id">BILICACIES</string>
+</resources>
